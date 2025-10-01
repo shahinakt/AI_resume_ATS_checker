@@ -1,59 +1,88 @@
-# Introduction to GitHub
+# AI Resume ATS Checker
 
-<!-- ![](https://github.com/shxynh/skills-introduction-to-githhub/actions/workflows/0-start-exercise.yml/badge.svg) -->
-![](https://github.com/shxynh/skills-introduction-to-githhub/actions/workflows/1-create-a-branch.yml/badge.svg)
-![](https://github.com/shxynh/skills-introduction-to-githhub/actions/workflows/2-commit-a-file.yml/badge.svg)
-![](https://github.com/shxynh/skills-introduction-to-githhub/actions/workflows/3-open-a-pull-request.yml/badge.svg)
-![](https://github.com/shxynh/skills-introduction-to-githhub/actions/workflows/4-merge-your-pull-request.yml/badge.svg)
+> An intelligent web application that analyzes resumes against job descriptions using AI-powered ATS (Applicant Tracking System) technology.
 
-_Get started using GitHub in less than an hour._
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![React](https://img.shields.io/badge/React-19-61DAFB.svg)](https://reactjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688.svg)](https://fastapi.tiangolo.com/)
 
-## Welcome
+## Overview
 
-People use GitHub to build some of the most advanced technologies in the world. Whether you’re visualizing data or building a new game, there’s a whole community and set of tools on GitHub that can help you do it even better. GitHub Skills’ “Introduction to GitHub” exercise guides you through everything you need to start contributing in less than an hour.
+This application helps job seekers optimize their resumes by providing detailed analysis of how well their resume matches specific job requirements. It uses natural language processing and AI to simulate ATS scoring and provide actionable improvement suggestions.
 
-- **Who is this for**: New developers, new GitHub users, and students.
-- **What you'll learn**: We'll introduce repositories, branches, commits, and pull requests.
-- **What you'll build**: We'll make a short Markdown file you can use as your [profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
-- **Prerequisites**: None. This exercise is a great introduction for your first day on GitHub.
-- **How long**: This exercise takes less than one hour to complete.
+## Features
 
-In this exercise, you will:
+- **Resume Analysis**: Upload PDF resumes for comprehensive evaluation
+- **Job Description Matching**: Compare resumes against specific job postings
+- **ATS Score Calculation**: Get numerical scores showing resume compatibility
+- **Improvement Suggestions**: Receive AI-powered recommendations for optimization
+- **Modern UI**: Clean, responsive interface built with React and Tailwind CSS
 
-1. Create a branch
-2. Commit a file
-3. Open a pull request
-4. Merge your pull request
+## Tech Stack
 
-### How to start this exercise
+### Frontend
+- React 19
+- Vite
+- Tailwind CSS
+- Framer Motion
 
-1. Right-click **Copy Exercise** and open the link in a new tab.
+### Backend
+- FastAPI
+- Python
+- OpenAI API
+- spaCy (NLP)
+- PyMuPDF (PDF processing)
 
-   <a id="copy-exercise">
-      <img src="https://img.shields.io/badge/📠_Copy_Exercise-AAA" height="25pt"/>
-   </a>
+## Getting Started
 
-2. In the new tab, most of the prompts will automatically fill in for you.
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.chttps://github.com/shxynh/skills-introduction-to-githhub/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Scroll down and click the **Create repository** button at the bottom of the form.
+### Prerequisites
+- Python 3.8+
+- Node.js 16+
+- OpenAI API key
 
-3. After your new repository is created, wait about 20 seconds for the exercise to be prepared and buttons updated. You will continue working from your copy of the exercise.
-   - The **Copy Exercise** button will deactivate, changing to gray.
-   - The **Start Exercise** button will activate, changing to green.
-   - You will likely need to refresh the page.
+### Installation
 
-4. Click **Start Exercise**. Follow the step-by-step instructions and feedback will be provided as you progress.
+1. **Clone the repository**
+```bash
+git clone https://github.com/shahinakt/AI_resume_ATS_checker.git
+cd AI_resume_ATS_checker
+```
 
-   <a id="start-exercise" href="https://github.com/shahinakt/AI_resume_ATS_checker/issues/1" href="https://github.com/shxynh/skills-introduction-to-githhub/issues/1">
-      <img src="https://img.shields.io/badge/🚀_Start_Exercise-008000" height="25pt"/>
-   </a>
+2. **Backend setup**
+```bash
+cd backend
+pip install -r requirements.txt
+```
 
-> [!IMPORTANT]
-> The **Start Exercise** button will activate after copying the repository. You will probably need to refresh the page.
+3. **Frontend setup**
+```bash
+cd frontend
+npm install
+```
 
----
+4. **Environment configuration**
+Create a `.env` file in the backend directory with your OpenAI API key:
+```env
+OPENAI_API_KEY=your_api_key_here
+```
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/introduction-to-github) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+### Running the Application
 
-&copy; 2024 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+1. **Start the backend server:**
+```bash
+cd backend
+uvicorn app.main:app --reload
+```
+
+2. **Start the frontend development server:**
+```bash
+cd frontend
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+## License
+
+This project is licensed under the MIT License.

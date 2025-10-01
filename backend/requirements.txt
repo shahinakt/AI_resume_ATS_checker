@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+PyMuPDF
+spacy
+rapidfuzz
+openai
+python-dotenv
+python-multipart
